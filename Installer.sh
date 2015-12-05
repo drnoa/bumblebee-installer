@@ -39,7 +39,9 @@ if ($nvididriver); then
   cd /etc/bumblebee
   ls -Al
   
-  echo "now the configuration is still missing.... WIP"
+  sed -i 's/nvidia-current/$nvididriver-updates/g' bumblebee.conf
+  
+  sudo service bumblebeed start
    
 else
   echo "not a driver"
