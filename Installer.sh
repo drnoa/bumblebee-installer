@@ -41,9 +41,14 @@ if ($nvididriver); then
   
   sed -i 's/nvidia-current/$nvididriver-updates/g' bumblebee.conf
   
-  sudo service bumblebeed start
+  service bumblebeed start
+  
+  apt-get install git
+  cd /tmp/
+  git clone https://github.com/Bumblebee-Project/bumblebee-ui.git
+  cd bumblebee-ui
+  sudo ./INSTALL
    
 else
   echo "not a driver"
 fi
-
