@@ -5,9 +5,9 @@ This script will install all the packages you need and configure the settings yo
 
 
 
-#Howto
+# Howto
 Download the installer.sh file.
 Execute wirh root priviledges and give the driver you wish as param.
 
-  sudo ./installer.sh nvidia-355
+  sudo ./installer.sh
 
